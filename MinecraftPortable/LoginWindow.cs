@@ -125,6 +125,7 @@ namespace MinecraftPortable
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "LoginWindow";
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
