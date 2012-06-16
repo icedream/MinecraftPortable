@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{21126B13-04BC-4BC9-9B98-5D1AF2757AAE}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>MinecraftPortable</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>MinecraftPortable</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\TNT.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DotNetZip\Zip\BZip2\BitWriter.cs" />
+    <Compile Include="DotNetZip\Zip\BZip2\BZip2Compressor.cs" />
+    <Compile Include="DotNetZip\Zip\BZip2\BZip2InputStream.cs" />
+    <Compile Include="DotNetZip\Zip\BZip2\BZip2OutputStream.cs" />
+    <Compile Include="DotNetZip\Zip\BZip2\ParallelBZip2OutputStream.cs" />
+    <Compile Include="DotNetZip\Zip\BZip2\Rand.cs" />
+    <Compile Include="DotNetZip\Zip\ComHelper.cs" />
+    <Compile Include="DotNetZip\Zip\CRC32.cs" />
+    <Compile Include="DotNetZip\Zip\EncryptionAlgorithm.cs" />
+    <Compile Include="DotNetZip\Zip\Events.cs" />
+    <Compile Include="DotNetZip\Zip\Exceptions.cs" />
+    <Compile Include="DotNetZip\Zip\ExtractExistingFileAction.cs" />
+    <Compile Include="DotNetZip\Zip\FileSelector.cs" />
+    <Compile Include="DotNetZip\Zip\OffsetStream.cs" />
+    <Compile Include="DotNetZip\Zip\Shared.cs" />
+    <Compile Include="DotNetZip\Zip\WinZipAes.cs" />
+    <Compile Include="DotNetZip\Zip\ZipConstants.cs" />
+    <Compile Include="DotNetZip\Zip\ZipCrypto.cs" />
+    <Compile Include="DotNetZip\Zip\ZipDirEntry.cs" />
+    <Compile Include="DotNetZip\Zip\ZipEntry.cs" />
+    <Compile Include="DotNetZip\Zip\ZipEntry.Extract.cs" />
+    <Compile Include="DotNetZip\Zip\ZipEntry.Read.cs" />
+    <Compile Include="DotNetZip\Zip\ZipEntry.Write.cs" />
+    <Compile Include="DotNetZip\Zip\ZipEntrySource.cs" />
+    <Compile Include="DotNetZip\Zip\ZipErrorAction.cs" />
+    <Compile Include="DotNetZip\Zip\ZipFile.AddUpdate.cs" />
+    <Compile Include="DotNetZip\Zip\ZipFile.Check.cs" />
+    <Compile Include="DotNetZip\Zip\ZipFile.cs" />
+    <Compile Include="DotNetZip\Zip\ZipFile.Events.cs" />
+    <Compile Include="DotNetZip\Zip\ZipFile.Extract.cs" />
+    <Compile Include="DotNetZip\Zip\ZipFile.Read.cs" />
+    <Compile Include="DotNetZip\Zip\ZipFile.Save.cs" />
+    <Compile Include="DotNetZip\Zip\ZipFile.SaveSelfExtractor.cs" />
+    <Compile Include="DotNetZip\Zip\ZipFile.Selector.cs" />
+    <Compile Include="DotNetZip\Zip\ZipFile.x-IEnumerable.cs" />
+    <Compile Include="DotNetZip\Zip\ZipInputStream.cs" />
+    <Compile Include="DotNetZip\Zip\ZipOutputStream.cs" />
+    <Compile Include="DotNetZip\Zip\ZipSegmentedStream.cs" />
+    <Compile Include="DotNetZip\Zip\Zlib\Deflate.cs" />
+    <Compile Include="DotNetZip\Zip\Zlib\DeflateStream.cs" />
+    <Compile Include="DotNetZip\Zip\Zlib\GZipStream.cs" />
+    <Compile Include="DotNetZip\Zip\Zlib\Inflate.cs" />
+    <Compile Include="DotNetZip\Zip\Zlib\InfTree.cs" />
+    <Compile Include="DotNetZip\Zip\Zlib\ParallelDeflateOutputStream.cs" />
+    <Compile Include="DotNetZip\Zip\Zlib\Tree.cs" />
+    <Compile Include="DotNetZip\Zip\Zlib\Zlib.cs" />
+    <Compile Include="DotNetZip\Zip\Zlib\ZlibBaseStream.cs" />
+    <Compile Include="DotNetZip\Zip\Zlib\ZlibCodec.cs" />
+    <Compile Include="DotNetZip\Zip\Zlib\ZlibConstants.cs" />
+    <Compile Include="DotNetZip\Zip\Zlib\ZlibStream.cs" />
+    <Compile Include="JarSwitcher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JarSwitcher.Designer.cs">
+      <DependentUpon>JarSwitcher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JavaNotFoundException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="JavaPath.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LoginWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="StartWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnpackWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Minecraft\Authentication.cs" />
+    <Compile Include="RedCorona.Cryptography\PKCSKeyGenerator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DotNetZip\License.Combined.rtf" />
+    <None Include="DotNetZip\License.rtf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DotNetZip\License.txt" />
+    <Content Include="DotNetZip\Readme.txt" />
+    <Content Include="DotNetZip\Zip\BZip2\License.BZip2.txt" />
+    <Content Include="DotNetZip\Zip\BZip2\NOTICE.txt" />
+    <Content Include="DotNetZip\Zip\Zlib\LICENSE.jzlib.txt" />
+    <Content Include="DotNetZip\Zip\Zlib\License.zlib.txt" />
+    <None Include="Resources\tnt.png" />
+    <None Include="Resources\TNT.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="JarSwitcher.resx">
+      <DependentUpon>JarSwitcher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginWindow.en.resx">
+      <DependentUpon>LoginWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginWindow.resx">
+      <DependentUpon>LoginWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartWindow.en.resx">
+      <DependentUpon>StartWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartWindow.resx">
+      <DependentUpon>StartWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnpackWindow.en.resx">
+      <DependentUpon>UnpackWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnpackWindow.resx">
+      <DependentUpon>UnpackWindow.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
