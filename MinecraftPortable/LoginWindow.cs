@@ -127,6 +127,7 @@ namespace MinecraftPortable
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "LoginWindow";
+            this.Load += new System.EventHandler(this.LoginWindow_Load);
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -304,6 +305,11 @@ namespace MinecraftPortable
         private void button2_Click(object sender, EventArgs e)
         {
             contextMenuStrip1.Show(this.Left + ((Control)sender).Left, this.Top + ((Control)sender).Top);
+        }
+
+        private void LoginWindow_Load(object sender, EventArgs e)
+        {
+            this.jarSwitch.Scan();
         }
 
 	}
